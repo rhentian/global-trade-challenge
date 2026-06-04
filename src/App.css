@@ -106,7 +106,7 @@ html, body { font-family: 'Inter', sans-serif; background: var(--black); color: 
 .rules-title { font-size:.62rem; font-weight:700; color:var(--gold); letter-spacing:2px; text-transform:uppercase; margin-bottom:.8rem; }
 .rules-box ul { list-style:none; }
 .rules-box li { font-size:.87rem; color:var(--soft); padding:.22rem 0; line-height:1.6; }
-.rules-box li::before { content:'◆ '; color:var(--gold); font-size:.5rem; }
+.rules-box li::before { content:''; }
 
 /* TURN SCREEN */
 .turn-screen {

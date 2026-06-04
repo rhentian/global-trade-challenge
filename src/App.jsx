@@ -7,7 +7,7 @@ import { QUESTIONS, GROQ_MODEL, GROQ_URL, buildGroqPrompt } from './tradeData.js
 import './App.css';
 
 const TMAX = 45;
-const TOTAL_ROUNDS = 3;
+const TOTAL_ROUNDS = 1;
 
 function shuffle(arr) {
   const a = [...arr];
@@ -164,16 +164,15 @@ function Splash({ onStart }) {
     <div className="screen splash">
       <div className="orb o1" /><div className="orb o2" />
       <div className="splash-content">
-        <div className="eyebrow"><span className="dot" />Economics of Globalization · Intercultural Day 2025</div>
+        <div className="eyebrow"><span className="dot" />Economics of Globalization · Intercultural Day 2026</div>
         <h1 className="splash-title">GLOBAL TRADE</h1>
-        <h2 className="splash-subtitle">Global Trade Challenge</h2>
+        <h2 className="splash-subtitle">Challenge</h2>
         <p className="splash-tagline">
-          <strong>Think you can out-decide an AI?</strong><br />
-          Real export crises. Real market data. 3 rounds.<br />
-          Fastest correct answer wins each round. Most rounds wins the match.
+          Real export cases. Real market data.<br />
+          <strong>Fastest correct answer wins.</strong>
         </p>
         <div className="splash-stats">
-          {[['10', 'Trade Scenarios'], ['3', 'Rounds'], ['45s', 'Per Question'], ['1', 'Winner']].map(([n, l]) => (
+          {[['45s', 'Per Question'], ['1', 'Round'], ['1', 'Winner']].map(([n, l]) => (
             <div key={l} className="stat"><div className="stat-n">{n}</div><div className="stat-l">{l}</div></div>
           ))}
         </div>
@@ -191,7 +190,7 @@ function Setup({ onLaunch }) {
     <div className="screen setup">
       <div className="setup-wrap">
         <h2 className="setup-title">Register Competitors</h2>
-        <p className="setup-sub">Enter the names of both players. The same question will be asked to each — answers hidden until both respond.</p>
+        <p className="setup-sub">Enter player names. Same question — answers hidden until both respond.</p>
         <div className="players-grid">
           <div className="player-card">
             <span className="pc-av">🌍</span>
@@ -199,26 +198,22 @@ function Setup({ onLaunch }) {
             <input className="pc-inp" value={p1} onChange={e => setP1(e.target.value)} maxLength={18} placeholder="Enter name…" />
           </div>
           <div className="player-card">
-            <span className="pc-av">⚡</span>
+            <span className="pc-av">🏆</span>
             <div className="pc-lbl">Player 2</div>
             <input className="pc-inp" value={p2} onChange={e => setP2(e.target.value)} maxLength={18} placeholder="Enter name…" />
           </div>
         </div>
         <div className="rules-box">
-          <div className="rules-title">⚔ Rules of Engagement</div>
+          <div className="rules-title">Rules</div>
           <ul>
             {[
-              '3 rounds — same question asked to each player one at a time',
-              'Player 2\'s screen is hidden while Player 1 answers',
-              'Answers revealed simultaneously after both respond',
-              'Correct answer + fastest time = round winner (+1 point)',
-              'If both answer correctly at the same time → Tiebreaker round',
-              'Player with most points after 3 rounds wins the match',
-              'After each reveal: press RUN AI to see the intelligence analysis'
+              'Same question for both — one at a time',
+              'Correct answer + fastest time = winner',
+              'After the reveal: press RUN AI for market analysis'
             ].map(r => <li key={r}>{r}</li>)}
           </ul>
         </div>
-        <button className="btn-gold" onClick={() => onLaunch(p1 || 'Player 1', p2 || 'Player 2')}>⚡ LAUNCH MATCH</button>
+        <button className="btn-gold" onClick={() => onLaunch(p1 || 'Player 1', p2 || 'Player 2')}>LAUNCH MATCH</button>
       </div>
     </div>
   );
@@ -469,7 +464,7 @@ function FinalResults({ p1Name, p2Name, p1Score, p2Score, rounds, lb, onReplay, 
         <div className="results-crown">{tie ? '🤝' : '👑'}</div>
         <div className="results-title">{tie ? 'IT\'S A TIE' : 'WINNER'}</div>
         {winnerName && <div className="results-winner-name">{winnerName.toUpperCase()}</div>}
-        <div className="results-sub">{p1Name} vs {p2Name} · {TOTAL_ROUNDS} Rounds · Global Trade Challenge 2025</div>
+        <div className="results-sub">{p1Name} vs {p2Name} · Global Trade Challenge 2026</div>
 
         <div className="res-vs">
           {[
