@@ -86,7 +86,7 @@ function AIPanel({ question, p1Name, p2Name, p1Answer, p2Answer, groqKey }) {
 
   useEffect(() => {
     if (!groqKey) {
-      setAnalysis('Add your Groq API key in the .env file (VITE_GROQ_KEY) to enable AI analysis.');
+      setAnalysis('Add your Groq API key in the .env file (VITE_GROQ_API_KEY) to enable AI analysis.');
       setLoading(false);
       return;
     }
@@ -539,7 +539,7 @@ export default function App() {
     try { return JSON.parse(localStorage.getItem('tiq_lb2') || '[]'); } catch { return []; }
   });
 
-  const groqKey = import.meta.env.VITE_GROQ_KEY;
+  const groqKey = import.meta.env.VITE_GROQ_API_KEY;
 
   function pickQuestion(exclude = []) {
     const pool = shuffle(QUESTIONS.filter(q => !exclude.includes(q.id)));
