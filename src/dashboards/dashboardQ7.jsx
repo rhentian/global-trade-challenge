@@ -1,73 +1,73 @@
 export const dashboardQ7 = {
   title: "Cacao → Chocolate Value Chain",
-  subtitle: "Captura de valor en cadena de suministro",
-  question: "¿Por qué cacao cae 69% pero chocolate retail cae solo 5%?",
+  subtitle: "Value capture in supply chain",
+  question: "Why does cacao fall 69% but chocolate retail only 5%?",
   
   kpis: [
-    { v: "-69%", l: "Cacao caída", d: "Ene 2025 - Mar 2026", up: false, c: "var(--red)" },
-    { v: "-5%", l: "Chocolate retail", d: "Mismo período", up: false, c: "var(--orange)" },
-    { v: "22%", l: "Margen retail", d: "$10 barra", up: true, c: "var(--cyan)" },
-    { v: "5%", l: "Margen productor", d: "Commodity (actual)", up: false, c: "var(--red)" }
+    { v: "-69%", l: "Cacao decline", d: "Jan 2025 - Mar 2026", up: false, c: "var(--red)" },
+    { v: "-5%", l: "Chocolate retail", d: "Same period", up: false, c: "var(--orange)" },
+    { v: "22%", l: "Retail margin", d: "$10 bar", up: true, c: "var(--cyan)" },
+    { v: "5%", l: "Producer margin", d: "Commodity (current)", up: false, c: "var(--red)" }
   ],
 
   sparkChart: {
-    title: "Precio cacao (commodity) vs chocolate retail",
-    description: "Retailer captura beneficios de caída de commodity",
+    title: "Cacao price (commodity) vs chocolate retail",
+    description: "Retailer captures benefits of commodity decline",
     values: [100, 91, 75, 76, 84, 78, 69, 71, 65, 56, 52, 54, 47, 34, 30, 32],
     color: "#7c4dff"
   },
 
   options: [
     {
-      title: "Opción 1: Commodity Puro",
-      destination: "Venta como materia prima",
-      price: "$0.50 de barra $10",
+      title: "Option 1: Pure Commodity",
+      destination: "Sale as raw material",
+      price: "$0.50 of $10 bar",
       color: "#ff3d71",
       border: "#ff3d71",
-      highlights: ["5% de valor final", "Crédito a retailer", "Caída proporcional"],
+      highlights: ["5% of final value", "Credit to retailer", "Proportional decline"],
       recommended: false
     },
     {
-      title: "Opción 2: Fermentado/Procesado",
-      destination: "Producto intermedio",
-      price: "$1.50-2.00 de barra",
+      title: "Option 2: Fermented/Processed",
+      destination: "Intermediate product",
+      price: "$1.50-2.00 of bar",
       color: "#f5c400",
       border: "#f5c400",
-      highlights: ["15% de valor", "Margen 8-12%", "Mejor posición"],
+      highlights: ["15% of value", "8-12% margin", "Better position"],
       recommended: false
     },
     {
-      title: "Opción 3: Chocolate Local",
-      destination: "Marca propia ecuatoriana",
-      price: "$3.00-3.50 de barra",
+      title: "Option 3: Ecuadorian Chocolate Brand",
+      destination: "Own brand",
+      price: "$3.00-3.50 of bar",
       color: "#06ffa5",
       border: "#06ffa5",
-      highlights: ["30-35% valor", "Margen 15%+", "RECOMENDADO"],
+      highlights: ["30-35% value", "15%+ margin", "RECOMMENDED"],
       recommended: true
     }
   ],
 
   narrative: `
-    <h4>La respuesta correcta explicada</h4>
-    <p><strong style="color: #06ffa5;">Integración vertical (chocolate marca Ecuador) es la única forma de capturar valor - respuesta correcta.</strong></p>
-    <p><strong>La "mágica desaparición de la crisis" - solo para retailers:</strong></p>
-    <p>Barra chocolate $10 (Alemania 2026) se descompone así:</p>
+    <h4>The correct answer explained</h4>
+    <p><strong style="color: #06ffa5;">Vertical integration (Ecuador chocolate brand) is the only way to capture value - correct answer.</strong></p>
+    <p><strong>The "magic disappearance of crisis" - only for retailers:</strong></p>
+    <p>$10 chocolate bar (Germany 2026) breaks down:</p>
     <ul>
-      <li><strong>Productor cacao (commodity):</strong> 5% = $0.50 ← <strong style="color: #ff3d71;">ESTE CAYÓ 69% ($0.50→$0.15)</strong></li>
-      <li><strong>Procesador/Fabricante:</strong> 18% = $1.80</li>
-      <li><strong>Logística/Distribución:</strong> 10% = $1.00</li>
-      <li><strong>Retailer (margen):</strong> 22% = $2.20 ← <strong style="color: #06ffa5;">ESTE CRECIÓ (capturó diferencia)</strong></li>
-      <li><strong>Otros (impuestos):</strong> 45% = $4.50</li>
+      <li><strong>Cacao producer (commodity):</strong> 5% = $0.50 ← <strong style="color: #ff3d71;">THIS FELL 69% ($0.50→$0.15)</strong></li>
+      <li><strong>Processor/Manufacturer:</strong> 18% = $1.80</li>
+      <li><strong>Logistics/Distribution:</strong> 10% = $1.00</li>
+      <li><strong>Retailer (margin):</strong> 22% = $2.20 ← <strong style="color: #06ffa5;">THIS GREW (captured difference)</strong></li>
+      <li><strong>Other (taxes):</strong> 45% = $4.50</li>
     </ul>
-    <p><u>Lo que pasó:</u> Cacao commodity: $10,710 → $3,241 (-69%). Chocolate retail: $10.00 → $9.50 (-5%). Diferencia de $0.35/barra × volumen = retailer se embolsa millones. <strong style="color: #06ffa5;">Productor pierde, retailer gana.</strong></p>
+    <p><u>What happened:</u> Cacao commodity: $10,710 → $3,241 (-69%). Chocolate retail: $10.00 → $9.50 (-5%). Difference of $0.35/bar × volume = retailer pockets millions. <strong style="color: #06ffa5;">Producer loses, retailer wins.</strong></p>
   `,
 
   recommendation: `
-    <strong>🎯 Integración vertical: 3 años a control 35% del valor</strong><br><br>
-    <strong>Línea 1 (Año 1 - Procesamiento fermentado local):</strong> Construir pequeña planta de fermentación en Ecuador (costo $50k). Vender cacao fermentado (no commodity puro) a chocolateros EU. Captura: 15% de valor barra $10 = margen 8-10% (vs 5% commodity).<br><br>
-    <strong>Línea 2 (Año 2 - Chocolatería básica):</strong> Máquina de procesamiento chocolate básica (costo $80k). Hacer chocolate en barra simple "Ecuador". Vender a distribuidores EU. Captura: 25% de valor = margen 12-15%.<br><br>
-    <strong>Línea 3 (Año 3 - Marca propia gourmet):</strong> "Ecuador Premium Chocolate" con diseño premium + distribución directa EU+USA. Control 30-35% de valor = margen 15-22%.<br><br>
-    <strong>Línea 4 (ROI números):</strong> 1 hectárea cacao commodity = $2,000/año margen. Con integración vertical año 3 = $10,000-12,000/año margen. Multiplicador: 5-6x retorno. Inversión total 3 años: $130k. Payback: 18 meses. Luego: $10k/año de margen puro perpetua.
+    <strong>🎯 Vertical integration: 3 years to control 35% of value</strong><br><br>
+    <strong>Line 1 (Year 1 - Local fermented processing):</strong> Build small fermentation plant in Ecuador (cost $50k). Sell fermented cacao (not pure commodity) to EU chocolatiers. Capture: 15% of $10 bar value = 8-10% margin (vs 5% commodity).<br><br>
+    <strong>Line 2 (Year 2 - Basic chocolate making):</strong> Chocolate processing machine (cost $80k). Make simple chocolate bar "Ecuador". Sell to EU distributors. Capture: 25% of value = 12-15% margin.<br><br>
+    <strong>Line 3 (Year 3 - Own premium brand):</strong> "Ecuador Premium Chocolate" with premium design + direct EU+USA distribution. Control 30-35% of value = 15-22% margin.<br><br>
+    <strong>Line 4 (ROI numbers):</strong> 1 hectare cacao commodity = $2,000/year margin. With vertical integration year 3 = $10,000-12,000/year margin. Multiplier: 5-6x return. Total 3-year investment: $130k. Payback: 18 months. Then: $10k/year pure margin perpetual.
   `,
 
   source: "WTO Trade Statistics, ITC Trade Map, Chocolate Industry Report"

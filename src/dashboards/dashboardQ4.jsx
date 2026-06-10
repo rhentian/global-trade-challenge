@@ -1,82 +1,82 @@
 export const dashboardQ4 = {
   title: "Specialty Coffee Colombia",
-  subtitle: "Elección de comprador correcto",
-  question: "¿Cómo elegir el comprador correcto en mercado volátil?",
+  subtitle: "Choosing the right buyer in volatile market",
+  question: "How to choose the right buyer in a volatile market?",
   
   kpis: [
-    { v: "$4.10/lb", l: "Pico", d: "Nov 2025", up: true, c: "var(--cyan)" },
-    { v: "$3.21/lb", l: "Mínimo", d: "Feb 2026", up: false, c: "var(--red)" },
-    { v: "-21.7%", l: "Caída", d: "3 meses", up: false, c: "var(--orange)" },
+    { v: "$4.10/lb", l: "Peak", d: "Nov 2025", up: true, c: "var(--cyan)" },
+    { v: "$3.21/lb", l: "Minimum", d: "Feb 2026", up: false, c: "var(--red)" },
+    { v: "-21.7%", l: "Decline", d: "3 months", up: false, c: "var(--orange)" },
     { v: "$6.00-8.00/lb", l: "Direct Trade", d: "Premium", up: true, c: "var(--cyan)" }
   ],
 
   sparkChart: {
-    title: "Precios Arabica specialty vs commodity",
-    description: "Commodity volátil ($4.10→$3.21), specialty estable ($4.50-5.50)",
+    title: "Specialty Arabica prices vs commodity",
+    description: "Commodity volatile ($4.10→$3.21), specialty stable ($4.50-5.50)",
     values: [4.10, 3.98, 3.85, 3.72, 3.58, 3.46, 3.35, 3.43, 3.52, 3.61, 3.70, 3.80],
     color: "#f5c400"
   },
 
   options: [
     {
-      title: "Opción 1: Commodity",
-      destination: "Destino: USA generic",
-      price: "$3.21/lb (volátil)",
+      title: "Option 1: Commodity",
+      destination: "Destination: USA generic",
+      price: "$3.21/lb (volatile)",
       color: "#ff3d71",
       border: "#ff3d71",
       highlights: [
-        "Volatilidad extrema",
-        "Sin contrato long term",
-        "Margen mínimo"
+        "Extreme volatility",
+        "No long-term contract",
+        "Minimum margin"
       ],
       recommended: false
     },
     {
-      title: "Opción 2: Specialty EU",
-      destination: "Destino: Alemania, Italia",
-      price: "$4.50-5.50/lb (estable)",
+      title: "Option 2: Specialty EU",
+      destination: "Destination: Germany, Italy",
+      price: "$4.50-5.50/lb (stable)",
       color: "#f5c400",
       border: "#f5c400",
       highlights: [
-        "Contratos 12-24 meses",
-        "Trazabilidad premium",
-        "Margen +25%"
+        "12-24 month contracts",
+        "Premium traceability",
+        "+25% margin"
       ],
       recommended: false
     },
     {
-      title: "Opción 3: Direct Trade",
-      destination: "Destino: Roasters premium",
-      price: "$6.00-8.00/lb (máximo)",
+      title: "Option 3: Direct Trade",
+      destination: "Destination: Premium roasters",
+      price: "$6.00-8.00/lb (maximum)",
       color: "#06ffa5",
       border: "#06ffa5",
       highlights: [
-        "Relación directa buyer",
-        "Contratos multi-año",
-        "RECOMENDADO"
+        "Direct buyer relationship",
+        "Multi-year contracts",
+        "RECOMMENDED"
       ],
       recommended: true
     }
   ],
 
   narrative: `
-    <h4>La respuesta correcta explicada</h4>
-    <p><strong style="color: #06ffa5;">Direct Trade es la opción correcta.</strong> Aquí por qué:</p>
-    <p><strong>Mismo café, 3 compradores, 3 precios radicalmente diferentes:</strong></p>
+    <h4>The correct answer explained</h4>
+    <p><strong style="color: #06ffa5;">Direct Trade is the correct option.</strong> Here's why:</p>
+    <p><strong>Same coffee, 3 buyers, 3 radically different prices:</strong></p>
     <ul>
-      <li><strong>Commodity (NYC Futures):</strong> $3.21/lb (volátil, sin contrato, cayó 21.7% en 3 meses)</li>
-      <li><strong>Specialty EU (SCA 80+):</strong> $4.50-5.50/lb (estable gracias a contratos 12-24 meses, bajó solo 5%)</li>
-      <li><strong>Direct Trade (Roaster premium):</strong> $6.00-8.00/lb (relación directa, contratos multi-año, resistance a volatilidad)</li>
+      <li><strong>Commodity (NYC Futures):</strong> $3.21/lb (volatile, no contract, fell 21.7% in 3 months)</li>
+      <li><strong>Specialty EU (SCA 80+):</strong> $4.50-5.50/lb (stable thanks to 12-24 month contracts, down only 5%)</li>
+      <li><strong>Direct Trade (Premium roaster):</strong> $6.00-8.00/lb (direct relationship, multi-year contracts, volatility resistance)</li>
     </ul>
-    <p><u>Clave:</u> <strong style="color: #06ffa5;">Elegir el comprador correcto reduce volatilidad 75%.</strong> No es el precio spot el que importa, sino la estabilidad del contrato y la relación buyer-seller a largo plazo.</p>
+    <p><u>Key:</u> <strong style="color: #06ffa5;">Choosing the right buyer reduces volatility 75%.</strong> It's not spot price that matters, but contract stability and long-term buyer-seller relationship.</p>
   `,
 
   recommendation: `
-    <strong>📊 Roadmap: Commodity → Specialty → Direct Trade (12 meses)</strong><br><br>
-    <strong>Línea 1 - Immediate (0-3 meses):</strong> Certificación SCA (Specialty Coffee Association, costo $500). Garantiza 80+ puntos = acceso a buyers premium. Contrato forward 12 meses con importer alemán/italiano = $4.50/lb garantizado.<br><br>
-    <strong>Línea 2 - Short term (3-6 meses):</strong> Visita directa a roasters premium EU (Alemania, Suiza, Italia). Negocia Direct Trade = relación comprador-productor sin intermediarios = $6.00-8.00/lb + contrato 3-5 años.<br><br>
-    <strong>Línea 3 - Resultado números:</strong> Commodity $3.21 → Specialty $4.50 = +40% premium. Specialty $4.50 → Direct Trade $7.00 = +56% adicional. Total: +120% vs commodity = margen 5-8% → 18-25%.<br><br>
-    <strong>Línea 4 - Timeline ROI:</strong> Cambio a Direct Trade en mes 6 = $4,500/año de margen extra por hectárea de café. Costo cambio = $2,000. Payback = 5.3 meses. Luego: $4,500/año perpetua.
+    <strong>📊 Roadmap: Commodity → Specialty → Direct Trade (12 months)</strong><br><br>
+    <strong>Step 1 - Immediate (0-3 months):</strong> SCA (Specialty Coffee Association) certification, cost $500. Guarantees 80+ score = access to premium buyers. 12-month forward contract with German/Italian importer = $4.50/lb guaranteed.<br><br>
+    <strong>Step 2 - Short term (3-6 months):</strong> Direct visit to premium EU roasters (Germany, Switzerland, Italy). Negotiate Direct Trade = buyer-producer relationship without intermediaries = $6.00-8.00/lb + 3-5 year contract.<br><br>
+    <strong>Step 3 - Financial results:</strong> Commodity $3.21 → Specialty $4.50 = +40% premium. Specialty $4.50 → Direct Trade $7.00 = +56% additional. Total: +120% vs commodity = margin 5-8% → 18-25%.<br><br>
+    <strong>Step 4 - Timeline ROI:</strong> Switch to Direct Trade in month 6 = $4,500/year additional margin per hectare. Switching cost = $2,000. Payback = 5.3 months. Then: $4,500/year perpetual.
   `,
 
   source: "FRED PCOFFOTMUSDM, SCA Grading, Direct Trade Certified"
