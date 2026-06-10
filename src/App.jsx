@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { playSound, createConfetti, getMotivationalPhrase } from './soundHelper.js';
 import { QUESTIONS, GROQ_MODEL, GROQ_URL } from './tradeData.js';
 import { dashboardQ1 } from "./dashboards/dashboardQ1.jsx";
 import { dashboardQ2 } from "./dashboards/dashboardQ2.jsx";
@@ -1563,6 +1564,11 @@ function RevealScreen({
 }
 
 function FinalResults({ p1Name, p2Name, p1Score, p2Score, rounds, lb, onReplay, onHome }) {
+  // AGREGAR CONFETTI CUANDO SE VE LA PANTALLA
+  useEffect(() => {
+    createConfetti();
+  }, []);
+
   const p1w = p1Score > p2Score;
   const p2w = p2Score > p1Score;
   const tie = p1Score === p2Score;
@@ -1671,18 +1677,36 @@ const groqKey = import.meta.env.VITE_GROQ_API_KEY;
   }
 
   function p1Submit(answer, time) {
-    setP1Answer(answer);
-    setP1Time(time);
-    setP1Correct(answer === question.correct);
-    setScreen('waiting');
+    const isCorrect = answer === question.correct;
+  
+  // AGREGAR SONIDO
+  if (isCorrect) {
+    playSound('success');
+  } else if (answer !== -1) {
+    playSound('error');
   }
+  
+  setP1Answer(answer);
+  setP1Time(time);
+  setP1Correct(isCorrect);
+  setScreen('waiting');
+}
 
   function p2Submit(answer, time) {
-    setP2Answer(answer);
-    setP2Time(time);
-    setP2Correct(answer === question.correct);
-    setScreen('reveal');
+  const isCorrect = answer === question.correct;
+  
+  // AGREGAR SONIDO
+  if (isCorrect) {
+    playSound('success');
+  } else if (answer !== -1) {
+    playSound('error');
   }
+  
+  setP2Answer(answer);
+  setP2Time(time);
+  setP2Correct(isCorrect);
+  setScreen('reveal');
+}
 
   function handleContinue(roundWinner) {
     const newP1 = p1Score + (roundWinner === 'p1' ? 1 : 0);
